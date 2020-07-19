@@ -1,0 +1,133 @@
+:root {
+    --card-shadow: 2px 2px 4px rgba(12, 83, 116, 0.25),
+    -2px -2px 4px rgba(12, 83, 116, 0.25);
+    --main-text-color: #0c5374;
+    --lighter-main-text: #4F90AE;
+    --grey-background: #e2e2e2;
+    --dark-green: #199098;
+    --light-green: #7fcaa3;
+    --yellow: #fbdda0;
+    --orange: #ee7470;
+    --pink: #da3d77;
+    --purple: #7a226e;
+    --lewis-bg: #2f3f43;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+* {
+    box-sizing: border-box;
+    font-family: ‘Open Sans’, sans-serif;
+}
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: var(--grey-background);
+    /*background: var(--lewis-bg);*/
+}
+
+.main {
+    /*margin-left: 200px;*/
+    margin-top: 90px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+
+
+    padding: 0 12px;
+    color: var(--main-text-color);
+    background: var(--grey-background);
+
+}
+
+
+/**/
+header {
+    grid-area: header;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 60px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    color: var(--main-text-color);
+    background: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+header i { /*notification bell*/
+    margin-top: 20px;
+    font-size: 20px;
+    float: right;
+}
+header #company-logo img {
+    float: left;
+    margin: 16px;
+    width: 140px;
+    height: auto;
+}
+header #user-name {
+    float: right;
+    margin: 18px 0px 0px 10px;
+    align-item: center;
+}
+header #user-photo img {
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin: 10px 18px;
+    object-fit: cover;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+}
+
+.z-index-hide {
+    z-index: -1;
+}
+.z-index-show {
+    z-index: 1;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.penca-nav {
+    height: 60px;
+}
+
+.warning {
+    background-color: red !important;
+}
+
+.success {
+    background-color: #c3faa5 !important;;
+}
+
+.waiting {
+    background-color: lightgoldenrodyellow !important;;
+}
+
+
+.caret {
+    font-size: 30px;
+}
+.caretUp {
+    color: forestgreen;
+}
+
+.caretDown {
+    color: red;
+}
+
+select:focus {
+    border: 2px solid var(--lighter-main-text);
+    outline-color: transparent;
+    outline-style: none;
+}

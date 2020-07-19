@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+}
+td:hover {
+    cursor: pointer;
+}
+td:hover:first-child {
+    background: var(--lighter-main-text);
+    color: white;
+}
+td, th {
+    border: 1px solid var(--grey-background);
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: var(--grey-background);
+}

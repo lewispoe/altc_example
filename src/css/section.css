@@ -1,0 +1,74 @@
+/**/
+/*CARD*/
+section {
+    max-width: 100%;
+    box-shadow: var(--card-shadow);
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    overflow: hidden;
+}
+section h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+.header-buttons {
+    margin-left: auto;
+    min-width: 300px;
+}
+.header-buttons button {
+    margin-left: 16px;
+}
+.section-inner {
+    margin: 32px;
+}
+
+.red_text {
+    color: red;
+}
+
+
+.penca-button {
+    text-align: center;
+    height: 40px;
+    font-size: 16px;
+    background: white;
+    border: 1px solid var(--grey-background);
+    border-radius: 8px;
+    color: var(--main-text-colour);
+}
+.penca-button i {
+    font-size: 16px!important;
+    margin-right: 10px!important;
+}
+.penca-button {
+    background: var(--lighter-main-text);
+    color: white;
+    cursor: pointer;
+}
+.penca-button:hover {
+    background: white;
+    color: var(--lighter-main-text);
+}
+
+
+.page-expand {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+.page-expand button {
+    border: none;
+    font-size: 12px;
+    margin-left: auto;
+}
