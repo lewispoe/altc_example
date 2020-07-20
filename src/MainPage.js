@@ -16,13 +16,13 @@ const MainPage = () => {
     const isValid = () => {
         
         if (isNaN(parseInt(from_station_id))) {
-            setError('Error: Departure Station Not Set');
+            setError('Departure Station Not Set');
             return false;
         } else if (isNaN(parseInt(to_station_id))) {
-            setError('Error: Arrival Station Not Set');
+            setError('Arrival Station Not Set');
             return false;
         } else if (from_station_id === to_station_id) {
-            setError('Error: Departure station cannot be the same as Arrival Station');
+            setError('Departure station cannot be the same as Arrival Station');
             return false;
         }
         setError(null);
