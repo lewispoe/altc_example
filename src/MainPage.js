@@ -11,8 +11,6 @@ const MainPage = () => {
     const [from_station_id, setFromStation] = useState(null);
     const [to_station_id, setToStation] = useState(null);
 
-    //TODO - implement a validation method of stations, simple thing like, don't pick same FROM/TO station!
-    //Consider how you will manage the state of the choice in the Selection of the station from the sub-component
     const isValid = () => {
         
         if (isNaN(parseInt(from_station_id))) {
