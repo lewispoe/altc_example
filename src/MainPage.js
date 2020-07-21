@@ -36,8 +36,6 @@ const MainPage = () => {
     return (
 
         <div className="main grid-top-container">
-            <h1>From: {from_station_id}</h1>
-            <h1>To: {to_station_id}</h1>
             <section className="search">
                 <h3>Ticket Selection</h3>
                 <div className="inputs">
