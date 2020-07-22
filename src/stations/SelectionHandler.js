@@ -12,7 +12,6 @@ const SelectionHandler = (props) => {
 
     useEffect(() => {
         requestHelper.getStations().then(res => {
-            console.log(res.data.records);
             updateStations(res.data.records);
         })
     }, []);
