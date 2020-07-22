@@ -2,7 +2,7 @@ import React from "react";
 import "./css/table.css"
 
 const Results = ({rows}) => {
-    const mapRows = () => rows.map(row => <tr key={row.id}><td>{row.id}</td><td>{row.name}</td><td>{row.cost}</td></tr>);
+    const mapRows = () => rows.map(row => <tr key={row.id}><td>{row.id}</td><td>{row.name}</td><td>£{row.cost}</td></tr>);
     return (
         <section className="results">
             <h3>Results....</h3>

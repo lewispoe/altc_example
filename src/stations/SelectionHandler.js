@@ -1,15 +1,23 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Selection from "../components/Selection";
+import requestHelper from '../helpers/request-helper';
 
 
-const SelectionHandler = ({name}) => {
-    const [stations, updateStations]  = useState( []);
+const SelectionHandler = (props) => {
+    const [stations, updateStations] = useState([]);
 
-    useEffect(
-        console.log("TODO - add a REST call here....")
-        , []);
+    const handleChange = (e) => {
+        props.onChange(e.target.value)
+    }
 
-    return <Selection id={name + '-station'} name={name} options={stations}/>
+    useEffect(() => {
+        requestHelper.getStations().then(res => {
+            console.log(res.data.records);
+            updateStations(res.data.records);
+        })
+    }, []);
+
+    return <Selection id={props.id} name={props.name} stations={stations} onChange={handleChange} />
 
 }
 

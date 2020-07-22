@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import Selection from "./components/Selection";
 import Results from "./Results";
 import Error from "./Error";
-
+import SelectionHandler  from './stations/SelectionHandler';
+import requestHelper from './helpers/request-helper';
 
 const MainPage = () => {
     const [results, setResults] = useState([]);
@@ -29,7 +29,9 @@ const MainPage = () => {
 
     const click = () => {
         if (isValid()) {
-            setResults([{ id: 1, name: "fast", cost: "£300" }, { id: 2, name: "medium", cost: "£200" }, { id: 3, name: "slow", cost: "£100" }]);
+            requestHelper.getTicketTypes().then(res=>{
+                setResults(res.data.records)
+            })
         } 
     }
 
@@ -39,8 +41,8 @@ const MainPage = () => {
             <section className="search">
                 <h3>Ticket Selection</h3>
                 <div className="inputs">
-                    <Selection onChange={value => setFromStation(value)} id="from-station" name="From: " options={[{ value: 1, label: "Penzance" }, { value: 2, label: "Redruth" }, { value: 3, label: "Camborne" }]} />
-                    <Selection onChange={value => setToStation(value)} id="to-station" name="To: " options={[{ value: 4, label: "St Austell" }, { value: 2, label: "Redruth" }, { value: 6, label: "Plymouth" }, { value: 7, label: "London" }]} />
+                    <SelectionHandler id="from-station" onChange={value => setFromStation(value)} name="From: " />
+                    <SelectionHandler id="to-station" onChange={value => setToStation(value)} name="To: " />
                 </div>
                 <hr />
                 <div>
