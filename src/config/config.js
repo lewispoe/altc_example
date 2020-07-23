@@ -1,4 +1,5 @@
 
 export default {
-	serviceURL: 'http://localhost/altc_api/api'
+	serviceURL: 'http://localhost:3001',
+	onlineServiceURL: ''
 };
